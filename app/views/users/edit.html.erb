@@ -1,0 +1,24 @@
+<h1>Edit your Account!</h1>
+
+<%= form_for @edited_user do |f| %>
+  <div>
+    <span>First Name:</span>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+  </div>
+  <div>
+    <span>Last Name:</span>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+  </div>
+  <div>
+    <span>Email:</span>
+    <%= f.text_field :email, placeholder: "Email" %>
+  </div>
+  <div>
+    <span>Password:</span>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  <span>Current City:</span>
+  <%= f.text_field :current_city, placeholder: "Current City" %>
+  </div>
+  <%= f.submit "Submit" %>
+<% end %>
