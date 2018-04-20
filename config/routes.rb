@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
 
 
+  get 'cities/index'
+
+  get 'cities/new'
+
+  get 'cities/show'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 root to:'users#index'
 resources :users
+resources :cities
 
 get "/login", to: "sessions#new"
 get "/logout", to: "sessions#destroy"
