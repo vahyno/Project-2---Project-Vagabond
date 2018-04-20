@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180420172711) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "password_digest"
     t.string "current_city"
     t.string "user_photo"
     t.binary "user_photo_b"
