@@ -9,13 +9,26 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    redirect_to @user
-    # redirect_to ..._path #
+    # don't let current_user create new account
+    if current_user
+      redirect_to user_path(current_user)
+    else
+      @user = User.new(user_params)
+      if @user.save
+        session[:user_id] = @user.id
+        flash[:notice] = "Successfully signed up."
+        redirect_to user_path(@user)
+      else
+        flash[:error] = @user.errors.full_messages.join(", ")
+        redirect_to @user
+      end
+    end
   end
 
 def show
+
   @user = User.find_by_id(params[:id])
+
 end
 
 
