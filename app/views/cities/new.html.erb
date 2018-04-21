@@ -1,2 +1,13 @@
 <h1>Cities#new</h1>
-<p>Find me in app/views/cities/new.html.erb</p>
+
+<h1>Add a New City to Review</h1>
+
+<%= form_for @city do |f| %>
+  <div>
+    <%= f.text_field :city_name, placeholder: "City Name" %>
+  </div>
+  <div>
+    <%= f.text_field :photo, placeholder: "photo" %>
+  </div>
+  <%= f.submit "Save this city" %>
+<% end %>

@@ -3,4 +3,6 @@
 <%@cities.each do |city|%>
   <%= city.city_name %>
   <img src="<%= city.photo %>">
+  <%=link_to "See More", city_path(city.id)%>
+</br>
 <%end%>
