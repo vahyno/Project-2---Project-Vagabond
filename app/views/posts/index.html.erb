@@ -1,5 +1,6 @@
 <h1>All the Posts</h1>
 <%@posts.each do |post|%>
-  <%= post.review_title %>
-  <%= post.review %>
+  <p><%= post.review_title %></p>
+  <p><%= post.review %></p>
+  <hr>
 <%end%>
