@@ -1,0 +1,10 @@
+<h1>Posts#new</h1>
+<%form_for @post do |f|%>
+    <div>
+      <%= f.text_field :review_title, placeholder: "Name Your Review" %>
+    </div>
+    <div>
+      <%= f.text_field :review, placeholder: "Write your review..." %>
+    </div>
+    <%= f.submit "Sign Up" %>
+  <% end %>
