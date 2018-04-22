@@ -19,22 +19,33 @@ city3 = City.create({city_name:"NYC", photo:"http://bdfjade.com/data/out/66/5722
 post1 = user1.cities << city1
 post2 = user1.cities << city3
 
-# post1.update["review_title"] = "Fancy-Pants Paris"
+p1 = Post.first
+p1.update(review_title: "Fancy-Pants Paris", review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
-# post1 = [{review_title: "Fancy-Pants Paris", review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}]
-
-# post2 = [{review_title: "I <3 NYC", review: "ostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}]
-
+p2 = Post.second
+p2.update(review_title: "I <3 NYC", review: "ostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
 
-# post = Post.create(
-#   {user_id: review_title:"Paris" review:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."})
-user2 = User.create({first_name: "Mad", last_name:"Man", email:"mad@gad.com", password:"123", current_city:"Freamont"})
+user2 = User.create({first_name: "Method", last_name:"Man", email:"wu@tang.com", password:"123", current_city:"NYC"})
 city2 = City.create({city_name:"London", photo:"http://www.ionekatours.com/files/images/cache/1327603710_800_600_1327603710.jpg"})
-#
+
 post3 = user2.cities << city2
-# post3 = [{review_title: "London is awesome", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum."}]
+
+p3 = Post.last
+p3.update(review_title: "London is awesome", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+
+p "++++++++++++++++++++++++++++"
+p "+++All users+++++"
+p User.all
+p "+++All cities+++++"
+p City.all
+p "++++p1++++"
+# p p1
+# p "++++p2++++"
+# p p2
+# p "++++p3++++"
+# p p3
+p "++++++++++++++++++++++++++++++"
 
 
-
-p "we seeded"
+p "Success"
