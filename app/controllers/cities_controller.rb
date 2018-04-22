@@ -19,6 +19,14 @@ class CitiesController < ApplicationController
   	@city = City.find_by_id(city_id)
   end
 
+  def destroy
+  	city_id = params[:id]
+  	city_to_delete = City.find_by_id(city_id)
+  	city_to_delete.destroy
+
+  	redirect_to cities_path
+  end 
+
 
 private
 def city_params

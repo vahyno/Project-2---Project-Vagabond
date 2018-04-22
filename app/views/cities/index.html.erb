@@ -1,8 +1,13 @@
+<div class="city">
+
 <h1>Cities#index</h1>
-<p>Find me in app/views/cities/index.html.erb</p>
+<div>
 <%@cities.each do |city|%>
   <%= city.city_name %>
   <img src="<%= city.photo %>">
   <%=link_to "See More", city_path(city.id)%>
 </br>
 <%end%>
+</div>
+
+</div>

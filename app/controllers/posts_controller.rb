@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
+
   def index
+    # @user = User.find(params[:id])
+    # @cities = @user.cities
     @posts = Post.all
   end
 
@@ -17,6 +20,7 @@ class PostsController < ApplicationController
   def show
   end
   def edit
+
   end
 
   def update
