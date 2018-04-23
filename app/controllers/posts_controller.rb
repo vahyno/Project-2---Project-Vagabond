@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   def show
     post_id = params[:id]
     @post = Post.find_by_id(post_id)
-    @city = City.find_by_id(params[:city_id])
+    @city = City.find_by_id(@post.city_id)
   end
 
   def edit

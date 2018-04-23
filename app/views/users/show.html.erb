@@ -10,28 +10,19 @@
 
 <div>
   <h2>All My Posts:</h2>
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">My London Review</h5>
-        <p class="card-text">sjsfhfhs</p>
-        <a href="#" class="btn btn-primary">Read About My Time in [city_name]</a>
+  <% @posts.each do |post| %>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5><%=link_to post.review_title, user_post_path(@user.id, post.id), class:"card-title" %></h5>
+            <p class="card-text"><%=post.review%></p>
+          
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-primary">Delete</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">My New York Review</h5>
-        <p class="card-text">This should be an image tag of the corresponding city.</p>
-        <a href="#" class="btn btn-primary">Read About My Time in [city_name]</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
+<% end %>
 </div>

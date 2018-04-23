@@ -6,7 +6,10 @@ Rails.application.routes.draw do
  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 root to:'users#index'
 
-resources :users
+resources :users do
+		resources :posts do
+	end
+end
 
 resources :cities do
 		resources :posts do
@@ -22,6 +25,14 @@ end
 
 #         Prefix Verb   URI Pattern                               Controller#Action
 #           root GET    /                                         users#index
+#     user_posts GET    /users/:user_id/posts(.:format)           posts#index
+#                POST   /users/:user_id/posts(.:format)           posts#create
+#  new_user_post GET    /users/:user_id/posts/new(.:format)       posts#new
+# edit_user_post GET    /users/:user_id/posts/:id/edit(.:format)  posts#edit
+#      user_post GET    /users/:user_id/posts/:id(.:format)       posts#show
+#                PATCH  /users/:user_id/posts/:id(.:format)       posts#update
+#                PUT    /users/:user_id/posts/:id(.:format)       posts#update
+#                DELETE /users/:user_id/posts/:id(.:format)       posts#destroy
 #          users GET    /users(.:format)                          users#index
 #                POST   /users(.:format)                          users#create
 #       new_user GET    /users/new(.:format)                      users#new
