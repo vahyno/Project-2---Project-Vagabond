@@ -18,7 +18,7 @@
             <h5><%=link_to post.review_title, user_post_path(@user.id, post.id), class:"card-title" %></h5>
             <p class="card-text"><%=post.review%></p>
             <%= link_to "Edit", edit_user_post_path(@user, post.id), class:"btn btn-primary" %>
-            <a href="#" class="btn btn-primary">Delete</a>
+            <%= button_to "Delete", delete_post_path(@user.id, post.id), method: :delete %>
           </div>
         </div>
       </div>

@@ -44,6 +44,10 @@ class UsersController < ApplicationController
     redirect_to user_path
   end
 
+  def destroy
+
+  end
+  
   private
 	def user_params
 		params.require(:user).permit(:first_name, :last_name, :current_city, :email, :password)

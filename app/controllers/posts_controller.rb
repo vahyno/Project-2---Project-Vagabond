@@ -38,12 +38,15 @@ class PostsController < ApplicationController
     edited_post = Post.find_by_id(params[:id])
     edited_post.update_attributes(post_params)
 
-    # redirect_to user_post_path
     redirect_to user_path(current_user.id)
   end
 
   def destroy
     #on post controller
+    @post = Post.find_by_id(params[:id])
+    @post.destroy
+
+    redirect_to user_path(current_user.id)
   end
 
   private

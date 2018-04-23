@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
-
-
-
- # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 root to:'users#index'
 
 resources :users do
-		resources :posts do
-	end
+		resources :posts, :except=> [:destroy]
 end
+
+delete "/users/:user_id/posts/:id", to: "posts#destroy", as: "delete_post"
 
 resources :cities do
 		resources :posts do
@@ -32,7 +30,6 @@ end
 #      user_post GET    /users/:user_id/posts/:id(.:format)       posts#show
 #                PATCH  /users/:user_id/posts/:id(.:format)       posts#update
 #                PUT    /users/:user_id/posts/:id(.:format)       posts#update
-#                DELETE /users/:user_id/posts/:id(.:format)       posts#destroy
 #          users GET    /users(.:format)                          users#index
 #                POST   /users(.:format)                          users#create
 #       new_user GET    /users/new(.:format)                      users#new
@@ -41,6 +38,7 @@ end
 #                PATCH  /users/:id(.:format)                      users#update
 #                PUT    /users/:id(.:format)                      users#update
 #                DELETE /users/:id(.:format)                      users#destroy
+#    delete_post DELETE /users/:user_id/posts/:id(.:format)       posts#destroy
 #     city_posts GET    /cities/:city_id/posts(.:format)          posts#index
 #                POST   /cities/:city_id/posts(.:format)          posts#create
 #  new_city_post GET    /cities/:city_id/posts/new(.:format)      posts#new
