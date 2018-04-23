@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  # def index 
+  # def index
   #   @user = User.find(params[:id])
   #   @cities = @user.cities
   #   @posts = Post.all
@@ -38,8 +38,8 @@ class PostsController < ApplicationController
     edited_post = Post.find_by_id(params[:id])
     edited_post.update_attributes(post_params)
 
-    redirect_to user_post_path
-    # redirect_to '/users/:user_id/posts/:id'
+    # redirect_to user_post_path
+    redirect_to user_path(current_user.id)
   end
 
   def destroy
