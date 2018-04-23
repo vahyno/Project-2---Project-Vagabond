@@ -22,6 +22,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    post_id = params[:id]
+    @post = Post.find_by_id(post_id)
+    @city = City.find_by_id(params[:city_id])
+  end
+
   def edit
     #on user controller
   end
