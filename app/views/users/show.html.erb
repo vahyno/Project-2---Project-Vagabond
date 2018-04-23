@@ -17,7 +17,7 @@
           <div class="card-body">
             <h5><%=link_to post.review_title, user_post_path(@user.id, post.id), class:"card-title" %></h5>
             <p class="card-text"><%=post.review%></p>
-            <a href="#" class="btn btn-primary">Edit</a>
+            <%= link_to "Edit", edit_user_post_path(@user, post.id), class:"btn btn-primary" %>
             <a href="#" class="btn btn-primary">Delete</a>
           </div>
         </div>
@@ -25,3 +25,6 @@
     </div>
 <% end %>
 </div>
+
+
+
