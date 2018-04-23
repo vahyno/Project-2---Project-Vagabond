@@ -1,8 +1,17 @@
+
+<body id=post_show>
 <h1>All the Posts</h1>
 <%@posts.each do |post|%>
-  <p><%= post.review_title %></p>
-  <p><%= post.review %></p>
-  <p><%=post.user_id%><p>
-  <hr>
-<%end%>
-
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="card">
+	      <div class="card-body">
+	        <h2 class="card-title"><%= post.review_title %></h2>
+	        <p class="card-text"><%= post.review %></p>
+	        <p><%=post.user_id%></p>
+	        <a href="#" class="btn btn-primary">See More</a>
+	      </div>
+	    </div>
+	  </div>
+	<%end%>
+</body>

@@ -3,4 +3,15 @@
 <img src="<%=@city.photo%>">
 <h1><%=@city.city_name%></h1>
 <%= link_to "All Cities", cities_path%>
-<%=link_to "New Post", posts_new_path%>
+
+
+<h1>New Post</h1>
+<%= form_for ([@city, @post]) do |f|%>
+    <div>
+      <%= f.text_field :review_title, placeholder: "Name Your Review" %>
+    </div>
+    <div>
+      <%= f.text_field :review, placeholder: "Write your review..." %>
+    </div>
+    <%= f.submit "Submit Your Post" %>
+  <% end %>

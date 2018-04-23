@@ -29,10 +29,10 @@ p2.update(review_title: "I <3 NYC", review: "ostrud exercitation ullamco laboris
 user2 = User.create({first_name: "Method", last_name:"Man", email:"wu@tang.com", password:"123", current_city:"NYC"})
 city2 = City.create({city_name:"London", photo:"http://www.ionekatours.com/files/images/cache/1327603710_800_600_1327603710.jpg"})
 
-post3 = user2.cities << city2
+post3 = user2.cities << city3
 
 p3 = Post.last
-p3.update(review_title: "London is awesome", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+p3.update(review_title: "NYC is awesome", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
 
 p "++++++++++++++++++++++++++++"
 p "+++All users+++++"

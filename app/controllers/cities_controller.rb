@@ -17,6 +17,9 @@ class CitiesController < ApplicationController
   def show
   	city_id = params[:id]
   	@city = City.find_by_id(city_id)
+    @post = Post.new
+    @posts = Post.find_by_id(params[:id])
+    @user = current_user
   end
 
   def destroy
