@@ -26,6 +26,7 @@ class PostsController < ApplicationController
     post_id = params[:id]
     @post = Post.find_by_id(post_id)
     @city = City.find_by_id(@post.city_id)
+    @user = current_user
   end
 
   def edit

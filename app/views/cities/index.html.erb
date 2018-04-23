@@ -3,9 +3,8 @@
 <h1>Cities#index</h1>
 <div>
 <%@cities.each do |city|%>
-  <%= city.city_name %>
+  <h2><%=link_to city.city_name, city_path(city.id)%></h2>
   <img src="<%= city.photo %>">
-  <%=link_to "See More", city_path(city.id)%>
 </br>
 <%end%>
 </div>

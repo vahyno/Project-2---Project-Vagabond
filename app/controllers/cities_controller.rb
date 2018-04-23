@@ -19,6 +19,7 @@ class CitiesController < ApplicationController
   	@city = City.find_by_id(city_id)
     @post = Post.new
     @posts = Post.find_by_id(params[:id])
+    @reviews = @city.posts
     @user = current_user
   end
 

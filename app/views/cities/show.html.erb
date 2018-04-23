@@ -15,3 +15,22 @@
     </div>
     <%= f.submit "Submit Your Post" %>
   <% end %>
+
+
+  <h2>All My Posts:</h2>
+  <% @reviews.each do |post| %>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5><%=link_to post.review_title, user_post_path(@user.id, post.id), class:"card-title" %></h5>
+            <p class="card-text"><%=post.review%></p>  
+            <p>Posted by: <%=@user.first_name%> <%=@user.last_name%></p> 
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-primary">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+</div>
