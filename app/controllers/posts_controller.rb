@@ -1,24 +1,29 @@
 class PostsController < ApplicationController
 
-  def index #dont need this
-    # @user = User.find(params[:id])
-    # @cities = @user.cities
-    @posts = Post.all
-  end
+  # def index 
+  #   @user = User.find(params[:id])
+  #   @cities = @user.cities
+  #   @posts = Post.all
+  # end
 
   # def new
   #   @post = Post.new  --- on cities controller
   # end
 
   def create
-    post = Post.new(post_params)
-    if post.save
-      redirect_to posts_path(post)
+    @post = City.find_by_id(params[:city_id])
+      .posts
+      .new(post_params)
+
+    @post.user_id = current_user.id
+
+    if @post.save
+      redirect_to city_post_path(params[:city_id], @post.id)
     end
   end
 
   def edit
-#on user controller
+    #on user controller
   end
 
   def update
@@ -26,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-       #on post controller
+    #on post controller
   end
 
   private
