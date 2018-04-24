@@ -12,4 +12,11 @@ module SessionsHelper
     @current_user = session[:user_id] = nil
   end
 
+ def require_login
+  if current_user == nil
+    flash[:notice]= "Please login to your account."
+    redirect_to login_path
+  end
+ end
+
 end

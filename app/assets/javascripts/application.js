@@ -15,3 +15,4 @@
 //= require_tree .
 //= require jquery3
 //= require bootstrap
+//= require data-confirm-modal

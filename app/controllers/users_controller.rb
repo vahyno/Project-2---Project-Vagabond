@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  before_action :get_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_login, only: [:show]
+  before_action :require_account_owner, except: [:new, :create]
+
   def index
     @users = User.all
   end
@@ -26,9 +31,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:id])
-    @post = Post.find_by_id(params[:user_id])  
-    @posts = @user.posts
+      @user = User.find_by_id(params[:id])
+      @post = Post.find_by_id(params[:user_id])  
+      @posts = @user.posts
   end
 
   def edit
@@ -47,7 +52,7 @@ class UsersController < ApplicationController
   def destroy
 
   end
-  
+
   private
 	def user_params
 		params.require(:user).permit(:first_name, :last_name, :current_city, :email, :password)
@@ -56,4 +61,16 @@ class UsersController < ApplicationController
   def edit_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :current_city) #user_photo
   end
+
+   def get_user
+    @user = User.find(params[:id])
+  end
+
+  def require_account_owner
+    if @current_user != @user
+      flash[:error] = 'You do not have permission to view this account.'
+      redirect_to root_path
+    end
+  end
+
 end
