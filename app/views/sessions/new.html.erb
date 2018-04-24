@@ -1,9 +1,11 @@
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-  <div>
-    <%= f.email_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Log In" %>
-<% end %>
+<div class="login_form">
+  <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+    <div>
+      <%= f.email_field :email, placeholder: "Email" %>
+    </div>
+    <div>
+      <%= f.password_field :password, placeholder: "Password" %>
+    </div>
+    <%= f.submit "Log In", class:"btn, btn-primary" %>
+  <% end %>
+</div>
