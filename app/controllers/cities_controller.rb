@@ -20,7 +20,7 @@ class CitiesController < ApplicationController
     @post = Post.new
     @posts = Post.find_by_id(params[:id])
     @reviews = @city.posts
-    @user = current_user
+    @user = current_user  #has to be changed 
   end
 
   def destroy
@@ -29,7 +29,7 @@ class CitiesController < ApplicationController
   	city_to_delete.destroy
 
   	redirect_to cities_path
-  end 
+  end
 
 
 private

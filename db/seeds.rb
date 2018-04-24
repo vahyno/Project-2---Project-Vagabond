@@ -27,31 +27,27 @@ post4 = user1.cities << city4
 post5 = user2.cities << city2
 
 p1 = Post.first
-p1.update(review_title: "Fancy-Pants Paris", review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+p1.update(review_title: "Fancy-Pants Paris", review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
 p2 = Post.second
-p2.update(review_title: "I <3 NYC", review: "ostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+p2.update(review_title: "I <3 NYC", review: "ostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.")
 
 p3 = Post.third
-p3.update(review_title: "Gibralter is cool.", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+p3.update(review_title: "Gibraltar is cool.", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
 
 p4 = Post.fourth
-p4.update(review_title: "NYC is awesome", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+p4.update(review_title: "NYC is awesome", review: "dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U.")
 
 p5 = Post.last
-p5.update(review_title: "Fun in London", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+p5.update(review_title: "Fun in London", review: "sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.")
 
 p "++++++++++++++++++++++++++++"
 p "+++All users+++++"
 p User.all
 p "+++All cities+++++"
 p City.all
-p "++++p1++++"
-# p p1
-# p "++++p2++++"
-# p p2
-# p "++++p3++++"
-# p p3
+"+++All posts+++++"
+p Post.all
 p "++++++++++++++++++++++++++++++"
 
 

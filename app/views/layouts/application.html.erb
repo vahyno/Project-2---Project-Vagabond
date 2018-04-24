@@ -13,8 +13,8 @@
     <header>
 <!-- Image and text -->
 <nav class="navbar navbar-light">
-  <a class="navbar-brand" href="#">
-    <img class="d-inline-block align-top" ><%=image_tag("vagabond-logo.jpg", width:"80", height:"50")%> 
+  <a class="navbar-brand" href="/cities">
+    <img class="d-inline-block align-top" ><%=image_tag("vagabond-logo.jpg", width:"80", height:"50")%>
   </a>
   <a>       <% if current_user %>
               <a><%= link_to "Profile", user_path(current_user) %></a>
@@ -26,8 +26,8 @@
 </nav>
 
  </header>
-       
-   
+
+
     <% flash.each do |name, msg| %>
       <p>
         <small> <%= name.capitalize %>: <%= msg %> </small>
