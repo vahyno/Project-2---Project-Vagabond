@@ -3,8 +3,7 @@
 <h1>Posts Show</h1>
 
 <div>
-  <%=image_tag("https://www.freeiconspng.com/img/910", alt: "default_img")%>
-  <%=image_tag("@user.user_photo", alt: "default_img")%>
+  <%=image_tag(@user.user_photo, alt: "default_img")%>
   <h4><%=@user.first_name%> <%=@user.last_name%></h4>
   <h4>Date Joined: <%=@user.created_at.to_date%></h4>
   <h4>Current city: <%=@user.current_city%></h4>
