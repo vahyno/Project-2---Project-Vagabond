@@ -1,20 +1,41 @@
-<h1>Cities#show (name of city here)</h1>
+<h1><%=@city.city_name%></h1>
 
 <img src="<%=@city.photo%>">
-<h1><%=@city.city_name%></h1>
+
 <%= link_to "All Cities", cities_path%>
 
 
-<h1>New Post</h1>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Create a New Post
+</button>
+
+<!-- Modal -->
 <%= form_for ([@city, @post]) do |f|%>
-    <div>
-      <%= f.text_field :review_title, placeholder: "Name Your Review" %>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <%= f.text_field :review_title, placeholder: "Review Title" %>
+        </div>
+        <div>
+          <%= f.text_area :review, placeholder: "Write your review..." %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit "Submit Your Post", class:"btn btn-secondary"%>
+      </div>
     </div>
-    <div>
-      <%= f.text_field :review, placeholder: "Write your review..." %>
-    </div>
-    <%= f.submit "Submit Your Post" %>
-  <% end %>
+  </div>
+</div>
+ <% end %>
 
 
   <h2>All My Posts:</h2>
