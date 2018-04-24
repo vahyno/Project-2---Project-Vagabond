@@ -29,4 +29,4 @@
 
 ## Thanks to:
 * WDI44 Cohort.
-* Faisal and Kenny for guidance.
+* Kenny and Faisal for guidance.

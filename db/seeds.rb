@@ -23,6 +23,8 @@ city4 = City.create({city_name:"New York City", photo:"https://images.unsplash.c
 post1 = user1.cities << city1
 post2 = user1.cities << city3
 post3 = user2.cities << city3
+post4 = user1.cities << city4
+post5 = user2.cities << city2
 
 p1 = Post.first
 p1.update(review_title: "Fancy-Pants Paris", review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
@@ -30,8 +32,14 @@ p1.update(review_title: "Fancy-Pants Paris", review: "Lorem ipsum dolor sit amet
 p2 = Post.second
 p2.update(review_title: "I <3 NYC", review: "ostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
-p3 = Post.last
-p3.update(review_title: "NYC is awesome", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+p3 = Post.third
+p3.update(review_title: "Gibralter is cool.", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+
+p4 = Post.fourth
+p4.update(review_title: "NYC is awesome", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
+
+p5 = Post.last
+p5.update(review_title: "Fun in London", review: "em ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exum.")
 
 p "++++++++++++++++++++++++++++"
 p "+++All users+++++"

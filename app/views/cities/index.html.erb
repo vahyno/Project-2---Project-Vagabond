@@ -1,7 +1,7 @@
 <div class="city">
 
 <h1>Cities#index</h1>
-<div>
+<div id="city_list">
 <%@cities.each do |city|%>
   <h2><%=link_to city.city_name, city_path(city.id)%></h2>
   <img src="<%= city.photo %>">

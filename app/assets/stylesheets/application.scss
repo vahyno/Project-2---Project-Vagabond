@@ -34,6 +34,37 @@ img .d-block{
 .carousel-item{
 	transition: .1s ease-in-out left;
 }
-#post_show{
-	
+
+
+.user-posts{
+	justify-content: center;
+}
+.all_posts{
+	text-align: center;
+}
+
+.city img{
+	width:700px;
+	height: 400px;
+}
+#city_list{
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.main_city_photo{
+	width:100%;
+}
+.btns{
+	text-align: center;
+}
+
+.show_city_title{
+	text-align: center;
+}
+
+.city_posts{
+	text-align: center;
+	margin-left: 25%;
+	margin-right: 25%;
 }
