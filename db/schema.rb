@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20180420224730) do
     t.string "email"
     t.string "password_digest"
     t.string "current_city"
-    t.string "user_photo", default: "https://www.freeiconspng.com/uploads/am-a-19-year-old-multimedia-artist-student-from-manila--21.png"
+    t.string "user_photo", default: "avatar.png"
     t.binary "user_photo_b"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
