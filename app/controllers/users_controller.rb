@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   before_action :get_user, only: [:show, :edit, :update, :destroy]
   before_action :require_login, only: [:show]
-  before_action :require_account_owner, except: [:new, :create]
+  before_action :require_account_owner, except: [:new, :create, :edit, :update] #added user edit profile did not work  :edit, :update
 
   def index
     @users = User.all
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def show
       @user = User.find_by_id(params[:id])
-      @post = Post.find_by_id(params[:user_id])  
+      @post = Post.find_by_id(params[:user_id])
       @posts = @user.posts
   end
 

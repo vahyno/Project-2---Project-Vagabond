@@ -1,6 +1,5 @@
 <div>
   <h1>Welcome <%=@user.first_name%>!</h1>
-  <%=image_tag(@user.user_photo, alt: "default_img")%>
   <h2>Date Joined: <%=@user.created_at.to_date%></h2>
   <h2>Current city: <%=@user.current_city%></h2>
 
