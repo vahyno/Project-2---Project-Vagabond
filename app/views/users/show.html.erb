@@ -1,9 +1,8 @@
-
 <div>
   <h1>Welcome <%=@user.first_name%>!</h1>
-  <%=image_tag("default-user.png", alt: "default_img")%>
-  <p>Current city: <%=@user.current_city%></p>
-  <p>Account created: <%=@user.created_at%></p>
+  <%=image_tag(@user.user_photo, alt: "default_img")%>
+  <h4>Date Joined: <%=@user.created_at.to_date%></h4>
+  <h4>Current city: <%=@user.current_city%></h4>
 
 <%=link_to "Edit Profile", edit_user_path%>
 
@@ -26,6 +25,3 @@
     </div>
 <% end %>
 </div>
-
-
-

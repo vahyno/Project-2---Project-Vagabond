@@ -1,7 +1,22 @@
 
 
 <h1>Posts Show</h1>
+
+<div>
+  <%=image_tag(@user.user_photo, alt: "default_img")%>
+  <h4><%=@user.first_name%> <%=@user.last_name%></h4>
+  <h4>Date Joined: <%=@user.created_at.to_date%></h4>
+  <h4>Current city: <%=@user.current_city%></h4>
+
+
+
+
+
+</div>
+
+<div>
 <h3><%=@city.city_name%></h3>
 <h3><%=@post.review_title%></h3>
 <p><%=@post.review%></p>
 <h4>Posted by: <%=@user.first_name%> <%=@user.last_name%></h4>
+</div>
