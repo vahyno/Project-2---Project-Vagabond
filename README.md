@@ -28,5 +28,4 @@
   app on Heroku: "https://secret-thicket-48628.herokuapp.com/"
 
 ## Thanks to:
-* WDI44 Cohort.
 * Kenny and Faisal for guidance.

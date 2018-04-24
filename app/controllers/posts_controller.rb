@@ -24,9 +24,11 @@ class PostsController < ApplicationController
 
   def show
     post_id = params[:id]
-    @post = Post.find_by_id(post_id)
+    @post = Post.find_by_id(post_id) #
     @city = City.find_by_id(@post.city_id)
     @user = current_user
+    @post_by_user = User.find_by_id(@post.user_id)
+    puts @post_by_user.first_name * 100
   end
 
   def edit
