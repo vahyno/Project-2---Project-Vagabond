@@ -25,7 +25,7 @@
 ## The team:
   Stacie https://github.com/stacief510 & Michal https://github.com/vahyno
 
-  app on Heroku: ""
+  app on Heroku: "https://secret-thicket-48628.herokuapp.com/"
 
 ## Thanks to:
 * WDI44 Cohort.
