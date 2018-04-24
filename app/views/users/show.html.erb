@@ -1,27 +1,32 @@
-<div>
-  <h1>Welcome <%=@user.first_name%>!</h1>
-  <%=image_tag(@user.user_photo, alt: "default_img")%>
-  <h4>Date Joined: <%=@user.created_at.to_date%></h4>
-  <h4>Current city: <%=@user.current_city%></h4>
+<div class="row mt-5">
 
-<%=link_to "Edit Profile", edit_user_path%>
+  <div class="col-3 offset-2">
+    <h1>Welcome <%=@user.first_name%>!</h1>
+    <%=image_tag(@user.user_photo, alt: "default_img")%>
+    <h5>Date Joined: <%=@user.created_at.to_date%></h5>
+    <h5>Current City: <%=@user.current_city%></h5>
 
-</div>
+    <%=link_to "Edit Profile", edit_user_path%>
+  </div>
 
-<div>
-  <h2>All My Posts:</h2>
-  <% @posts.reverse.each do |post| %>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5><%=link_to post.review_title, user_post_path(@user.id, post.id), class:"card-title" %></h5>
-            <p class="card-text"><%=post.review%></p>
-            <%= link_to "Edit", edit_user_post_path(@user, post.id), class:"btn btn-primary" %>
-            <%= button_to "Delete", delete_post_path(@user.id, post.id), method: :delete, class:"btn btn-danger", data: {confirm: 'Are you sure you want to Delete?'} %>
-          </div>
+  <div class="col-6">
+    <section>
+      <h2>All My Posts:</h2>
+      <% @posts.reverse.each do |post| %>
+        <div class="row">
+            <div class="card users">
+              <div class="card-body">
+                <h5><%=link_to post.review_title, user_post_path(@user.id, post.id), class:"card-title" %></h5>
+                <p class="card-text"><%=post.review%></p>
+
+                <%= link_to "Edit", edit_user_post_path(@user, post.id), class:"btn btn-primary" %>
+                <%= button_to "Delete", delete_post_path(@user.id, post.id), method: :delete, class:"btn btn-danger", data: {confirm: 'Are you sure you want to Delete?'} %>
+
+              </div>
+            </div>
         </div>
-      </div>
-    </div>
-<% end %>
+      <% end %>
+    </section>
+  <div>
+
 </div>

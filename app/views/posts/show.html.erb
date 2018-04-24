@@ -1,22 +1,24 @@
 
+<div class="row mt-5">
 
-<h1>Posts Show</h1>
-
-<div>
-  <%=image_tag(@user.user_photo, alt: "default_img")%>
-  <h4><%=@user.first_name%> <%=@user.last_name%></h4>
-  <h4>Date Joined: <%=@user.created_at.to_date%></h4>
-  <h4>Current city: <%=@user.current_city%></h4>
-
-
-
-
-
-</div>
-
-<div>
-<h3><%=@city.city_name%></h3>
-<h3><%=@post.review_title%></h3>
-<p><%=@post.review%></p>
-<h4>Posted by: <%=@user.first_name%> <%=@user.last_name%></h4>
+  <div class="col-3 offset-2">
+    <div>
+      <h2><%=@user.first_name%> <%=@user.last_name%></h2>
+      <%=image_tag(@user.user_photo, alt: "default_img")%>
+      <h5>Date Joined: <%=@user.created_at.to_date%></h5>
+      <h5>Current City: <%=@user.current_city%></h5>
+    </div>
+  </div>
+  <div class="col-6">
+    <a href="/cities/<%=@city.id%>"><h3><%=@city.city_name%></h3></a>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h3 class="card-title"><%=@post.review_title%></h3>
+          <p class="card-text">
+            <p><%=@post.review%></p>
+            <h5>Posted by: <%=@user.first_name%> <%=@user.last_name%></h5>
+          </p>
+        </div>
+      </div>
+    </div>
 </div>

@@ -12,9 +12,20 @@
  *
  */
  @import "bootstrap";
+.btn{
+  width: 80px;
+  margin-top: 5px;
+  padding: 5px;
+}
+.btn.create{
+  width: 150px;
+}
+.card users {
+  display: inline-flex;
+}
 
 .navbar{
-	background-color: #fff;	
+	background-color: #fff;
 }
 nav a {
 	color: black;
@@ -41,6 +52,8 @@ img .d-block{
 }
 .all_posts{
 	text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .city img{
@@ -65,6 +78,5 @@ img .d-block{
 
 .city_posts{
 	text-align: center;
-	margin-left: 25%;
-	margin-right: 25%;
+
 }

@@ -18,9 +18,9 @@ class CitiesController < ApplicationController
   	city_id = params[:id]
   	@city = City.find_by_id(city_id)
     @post = Post.new
-    @posts = Post.find_by_id(params[:id])
+    @posts = Post.find_by_id(params[:id]) # @posts = ?
     @reviews = @city.posts
-    @user = current_user  #has to be changed 
+    @user =   User.find_by_id(@reviews.first.user_id) #User.find_by_id(@posts)#has to be changed
   end
 
   def destroy
