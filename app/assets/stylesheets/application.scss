@@ -20,12 +20,18 @@
 .btn.create{
   width: 150px;
 }
+.btn-secondary{
+  width: 100px;
+}
 .card .users {
   display: inline-flex;
 }
 
 .navbar{
 	background-color: #fff;
+}
+#nav_links{
+  margin:2px;
 }
 nav a {
 	color: black;
@@ -36,7 +42,7 @@ nav img {
 	margin-right: 15px;
 }
 .carousel-inner{
-	height: 500px;
+	height: 780px;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black,  0 -1px black;
 }
 img .d-block{
@@ -80,4 +86,32 @@ img .d-block{
 .city_posts{
 	text-align: center;
 
+}
+
+.edit_field input{
+  width:100%;
+  border: 1px black solid;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 2em;
+}
+
+.edit_field textarea{
+  width:100%;
+  border: 1px black solid;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  height: 300px;
+  font-size: 1.5em;
+}
+
+.edit_heading{
+  margin-left: 15px;
+}
+
+.date_joined{
+  margin-top: 10px;
 }

@@ -5,7 +5,7 @@
     <div>
       <h2><%=@user.first_name%> <%=@user.last_name%></h2>
       <%=image_tag(@user.user_photo, alt: "default_img")%>
-      <h5>Date Joined: <%=@user.created_at.to_date%></h5>
+      <h5 class="date_joined">Date Joined: <%=@user.created_at.to_date%></h5>
       <h5>Current City: <%=@user.current_city%></h5>
     </div>
   </div>
