@@ -52,11 +52,14 @@ img .d-block{
 .carousel-item{
 	transition: .1s ease-in-out left;
 }
-.login_form{
+.login_form, .sign_up{
   position: relative;
   left: 40%;
   margin-top: 7%;
   width: 20%;
+}
+.sign{
+  text-align: center;
 }
 
 .user-posts{
